@@ -88,12 +88,14 @@ const Trending = ({ posts }) => {
     <FlatList
       data={posts}
       horizontal
+      showsHorizontalScrollIndicator={false}
       keyExtractor={(item) => item.$id}
       renderItem={({ item }) => (
         <TrendingItem activeItem={activeItem} item={item} />
       )}
       onViewableItemsChanged={viewableItemsChanged}
       viewabilityConfig={{
+        
         itemVisiblePercentThreshold: 70,
       }}
       contentOffset={{ x: 170 }}

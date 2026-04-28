@@ -19,6 +19,7 @@ const SignUp = () => {
   });
 
   const submit = async () => {
+    router.replace("/home");
     if (form.username === "" || form.email === "" || form.password === "") {
       Alert.alert("Error", "Please fill in all fields");
     }
